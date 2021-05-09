@@ -8,6 +8,8 @@ public class InitializeBoard {
     JPanel[][] squares = new JPanel[8][8];
 
     InitializeBoard() {
+        SetComponentsToClickable clickable=new SetComponentsToClickable(InitializeBoard.this);
+        //initializes board pattern
         frame = new JFrame("Chess");
         frame.setSize(800, 800);
         frame.setLayout(new GridLayout(8, 8));
@@ -23,11 +25,38 @@ public class InitializeBoard {
                 frame.add(squares[i][j]);
             }
         }
+        //puts the pieces on the board
+
+        squares[0][0].add(new JLabel(new ImageIcon(this.getClass().getResource("/brook.png"))));
+        squares[0][1].add(new JLabel(new ImageIcon(this.getClass().getResource("/bknight.png"))));
+        squares[0][2].add(new JLabel(new ImageIcon(this.getClass().getResource("/bbishop.png"))));
+        squares[0][3].add(new JLabel(new ImageIcon(this.getClass().getResource("/bqueen.png"))));
+        squares[0][4].add(new JLabel(new ImageIcon(this.getClass().getResource("/bking.png"))));
+        squares[0][5].add(new JLabel(new ImageIcon(this.getClass().getResource("/bbishop.png"))));
+        squares[0][6].add(new JLabel(new ImageIcon(this.getClass().getResource("/bknight.png"))));
+        squares[0][7].add(new JLabel(new ImageIcon(this.getClass().getResource("/brook.png"))));
+
+        squares[7][0].add(new JLabel(new ImageIcon(this.getClass().getResource("/wrook.png"))));
+        squares[7][1].add(new JLabel(new ImageIcon(this.getClass().getResource("/wknight.png"))));
+        squares[7][2].add(new JLabel(new ImageIcon(this.getClass().getResource("/wbishop.png"))));
+        squares[7][3].add(new JLabel(new ImageIcon(this.getClass().getResource("/wqueen.png"))));
+        squares[7][4].add(new JLabel(new ImageIcon(this.getClass().getResource("/wking.png"))));
+        squares[7][5].add(new JLabel(new ImageIcon(this.getClass().getResource("/wbishop.png"))));
+        squares[7][6].add(new JLabel(new ImageIcon(this.getClass().getResource("/wknight.png"))));
+        squares[7][7].add(new JLabel(new ImageIcon(this.getClass().getResource("/wrook.png"))));
+        for (int i=0;i<8;i++)
+        {
+            squares[1][i].add(new JLabel(new ImageIcon(this.getClass().getResource("/bpawn.png"))));
+            squares[6][i].add(new JLabel(new ImageIcon(this.getClass().getResource("/wpawn.png"))));
+        }
 
 
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.setVisible(true);
 
+    }
+    public JFrame getFrame(){
+        return frame;
     }
 
     public static void main(String[] args) {
