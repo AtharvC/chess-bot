@@ -2,6 +2,7 @@ package mainBoard;
 
 import javax.swing.*;
 import java.awt.*;
+import java.io.File;
 
 public class InitializeBoard {
     JFrame frame;
@@ -49,6 +50,7 @@ public class InitializeBoard {
             squares[1][i].add(new JLabel(new ImageIcon(this.getClass().getResource("/bpawn.png"))));
             squares[6][i].add(new JLabel(new ImageIcon(this.getClass().getResource("/wpawn.png"))));
         }
+        squares[0][0].add(new JLabel(new ImageIcon(this.getClass().getResource("/brook.png"))));
 
 
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
