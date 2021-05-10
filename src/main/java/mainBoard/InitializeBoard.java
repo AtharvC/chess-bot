@@ -9,11 +9,13 @@ public class InitializeBoard {
     JPanel[][] squares = new JPanel[8][8];
 
     InitializeBoard() {
-        SetComponentsToClickable clickable=new SetComponentsToClickable(InitializeBoard.this);
+
         //initializes board pattern
         frame = new JFrame("Chess");
         frame.setSize(800, 800);
         frame.setLayout(new GridLayout(8, 8));
+        Image icon=Toolkit.getDefaultToolkit().getImage(this.getClass().getResource("/Chess Logo.jpg"));
+        frame.setIconImage(icon);
 
         for (int i = 0; i < 8; i++) {
             for (int j = 0; j < 8; j++) {
@@ -23,9 +25,11 @@ public class InitializeBoard {
                 } else {
                     squares[i][j].setBackground(Color.black);
                 }
+
                 frame.add(squares[i][j]);
             }
         }
+
         //puts the pieces on the board
 
         squares[0][0].add(new JLabel(new ImageIcon(this.getClass().getResource("/brook.png"))));
@@ -57,7 +61,13 @@ public class InitializeBoard {
         frame.setVisible(true);
 
     }
+
+    public JPanel[][] getSquares() {
+        return squares.clone();
+    }
+
     public JFrame getFrame(){
+
         return frame;
     }
 
