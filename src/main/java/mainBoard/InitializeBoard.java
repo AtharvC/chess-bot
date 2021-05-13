@@ -2,7 +2,6 @@ package mainBoard;
 
 import javax.swing.*;
 import java.awt.*;
-import java.io.File;
 import java.util.HashMap;
 
 public class InitializeBoard {
@@ -40,6 +39,7 @@ public class InitializeBoard {
         squares[0][0].add(new JLabel(new ImageIcon(this.getClass().getResource("/brook.png"))));
         Piece brook = new Piece(1, "A8", 'b');
         squares[0][1].add(new JLabel(new ImageIcon(this.getClass().getResource("/bknight.png"))));
+        Piece bknight = new Piece(2, "B8", 'b');
         squares[0][2].add(new JLabel(new ImageIcon(this.getClass().getResource("/bbishop.png"))));
         Piece bbishop = new Piece(3, "C8", 'b');
         squares[0][3].add(new JLabel(new ImageIcon(this.getClass().getResource("/bqueen.png"))));
@@ -55,13 +55,21 @@ public class InitializeBoard {
 
 
         squares[7][0].add(new JLabel(new ImageIcon(this.getClass().getResource("/wrook.png"))));
+        Piece wrook1 = new Piece(1, "A1", 'w');
         squares[7][1].add(new JLabel(new ImageIcon(this.getClass().getResource("/wknight.png"))));
+        Piece wknight1 = new Piece(2, "A2", 'w');
         squares[7][2].add(new JLabel(new ImageIcon(this.getClass().getResource("/wbishop.png"))));
+        Piece wbishop1 = new Piece(3, "A3", 'w');
         squares[7][3].add(new JLabel(new ImageIcon(this.getClass().getResource("/wqueen.png"))));
+        Piece wqueen = new Piece(4, "A4", 'w');
         squares[7][4].add(new JLabel(new ImageIcon(this.getClass().getResource("/wking.png"))));
+        Piece wking = new Piece(5, "A5", 'w');
         squares[7][5].add(new JLabel(new ImageIcon(this.getClass().getResource("/wbishop.png"))));
+        Piece wbishop2 = new Piece(3, "A6", 'w');
         squares[7][6].add(new JLabel(new ImageIcon(this.getClass().getResource("/wknight.png"))));
+        Piece wknight2 = new Piece(2, "A7", 'w');
         squares[7][7].add(new JLabel(new ImageIcon(this.getClass().getResource("/wrook.png"))));
+        Piece wrook2 = new Piece(1, "A8", 'w');
         for (int i=0;i<8;i++)
         {
             squares[1][i].add(new JLabel(new ImageIcon(this.getClass().getResource("/bpawn.png"))));
