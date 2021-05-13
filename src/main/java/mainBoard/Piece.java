@@ -2,21 +2,18 @@ package mainBoard;
 
 public class Piece {
     Piece piece;
+    public static int ID;
+    private static char bw;
 
-    final int rook = 1;
-    final int knight = 2;
-    final int bishop = 3;
-    final int queen = 4;
-    final int king = 5;
-    final int slave = 6;
+    private String location = "";
 
-    Piece(int iD, String loc, char team){
+    Piece(int iD, String loc, char team) {
         ID = iD;
         location = loc;
         bw = team;
     }
 
-    public int getPieceID(){
+    public int getPieceID() {
         return ID;
     }
 
